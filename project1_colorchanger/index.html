@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer</title>
+    <style>
+        .button {
+            border: 2px solid black;
+            height: 10vw;
+            width: 15%;
+            padding: 2vw;
+            margin: 1vw;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+        }
+        #white {
+            background-color: rgb(255, 255, 255);
+        }
+        #yellow {
+            background-color: yellow;
+        }
+        #blue {
+            background-color: blue;
+        }
+        #brown {
+            background-color: brown;
+        }
+        p {
+            text-align: center;
+            margin: 1vw 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <div class="button" id="white">white</div>
+        <div class="button" id="blue">blue</div>
+        <div class="button" id="yellow">yellow</div>
+        <div class="button" id="brown">brown</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis nihil cupiditate? Reiciendis vel ipsam architecto maiores odio. Vel fugit modi eaque doloremque quibusdam itaque nobis alias, voluptas asperiores neque?</p>
+
+    <script>
+       const button= document.querySelectorAll('.button')
+       const body= document.querySelector('body')
+
+       button.forEach(function(button){
+        button.addEventListener('click', function(e){
+            if(e.target.id === 'yellow'){
+                body.style.backgroundColor = e.target.id;
+            }
+        })
+       });
+
+
+
+
+    </script>
+<!-- <script src="index.js"></script> -->
+</body>
+</html>
