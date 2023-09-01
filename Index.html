@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or Hammad</title>
+</head>
+<body>
+    <h1>Chai or Hammad</h1>
+    <button id="start">start</button>
+    <button id="end">end</button>
+</body>
+<script>
+
+
+  
+    const start = document.querySelector('#start')
+    const end = document.querySelector('#end')
+    let date = new Date();
+    const saydate = function(){
+        console.log("hammad" ,date);
+    }
+  
+    start.addEventListener('click' , function(){
+        interval =setInterval(saydate, 1000);
+
+
+})  
+
+    end.addEventListener('click' , function(){
+        clearInterval(interval)
+        console.log("Stopped");
+
+})
+</script>
+</html>
